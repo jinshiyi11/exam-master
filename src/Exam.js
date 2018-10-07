@@ -1,9 +1,10 @@
+import React, { Component } from 'react';
 import { List, Checkbox, Flex } from 'antd-mobile';
 
 const CheckboxItem = Checkbox.CheckboxItem;
 const AgreeItem = Checkbox.AgreeItem;
 
-class Test extends React.Component {
+class Exam extends React.Component {
   onChange = (val) => {
     console.log(val);
   }
@@ -14,7 +15,7 @@ class Test extends React.Component {
       { value: 2, label: 'College diploma' },
     ];
     return (<div>
-      <List renderHeader={() => 'CheckboxItem demo'}>
+      <List renderHeader={() => '第一题 小明的哥哥是谁'}>
         {data.map(i => (
           <CheckboxItem key={i.value} onChange={() => this.onChange(i.value)}>
             {i.label}
@@ -36,4 +37,5 @@ class Test extends React.Component {
   }
 }
 
-ReactDOM.render(<Test />, mountNode);
+
+export default Exam;
